@@ -1,1 +1,87 @@
-<p>identificacion works!</p>
+<!-- Identificacion.component.html -->
+<!--div class="center">
+<div class="row">
+  <div class="col s12 14 offset-14">
+    <div class="card grey lighten-3">
+      <div class="card-content">
+        <h4 class="card-title center-align">Login de Usuarios</h4>
+        <form>
+          <div class="row">
+            <div class="input-field col s12">
+              <i class="material-icons prefix">email</i>
+              <input type="email" id="email" class="validate" />
+              <label for="email">Usuario</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <i class="material-icons prefix">vpn_key</i>
+              <input type="password" id="password" class="validate" />
+              <label for="email">Contraseña</label>
+            </div>
+          </div>
+          <div class="row center-align">
+            <button
+              class="btn waves-effect waves-light"
+              type="button"
+              name="action"
+            >
+              Iniciar Sesion
+              <i class="material-icons right">send</i>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<br />
+<br /-->
+
+
+
+  <div class="center align">
+    <div class="section"></div>
+
+    <div class="container">
+      <div class="z-depth-1 grey lighten-4 row" style="display: inline-block; padding: 32px 48px 0px 48px; border: 1px solid #EEE;">
+        <h4 class="card-title center-align">Login de Usuarios</h4>
+        <form class="col s12" method="post" [formGroup]="fgValidador" (ngSubmit)="IdentificarUsuario()">
+          <div class='row'>
+            <div class='col s12'>
+            </div>
+          </div>
+
+          <div class='row'>
+            <div class='input-field col s12'>
+              <i class="material-icons prefix">email</i>
+              <input formControlName="usuario" class='validate' type='email' name='email' id='email' />
+              <label for='email'>Usuario</label>
+            </div>
+          </div>
+
+          <div class='row'>
+            <div class='input-field col s12'>
+              <i class="material-icons prefix">vpn_key</i>
+              <input formControlName="clave" class='validate' type='password' name='password' id='password' />
+              <label for='password'>Contraseña</label>
+            </div>
+            <label style='float: right;'>
+              <a class='pink-text' href="/seguridad/recuperarclave"><b>¿Olvido su Contraseña?</b></a>
+            </label>
+          </div>
+
+          <br />
+          <div class="center-align">
+            <div class='row'>
+              <button [disabled]="!fgValidador.valid" type='submit' name='btn_login' class='col s12 btn btn-large waves-effect indigo'>Ingresar
+                <i class="material-icons right">send</i>
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <a href="/seguridad/register">Crear Cuenta</a>
+    </div>

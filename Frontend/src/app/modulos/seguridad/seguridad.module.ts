@@ -5,17 +5,24 @@ import { SeguridadRoutingModule } from './seguridad-routing.module';
 import { IdentificacionComponent } from './identificacion/identificacion.component';
 import { CambioclaveComponent } from './cambioclave/cambioclave.component';
 import { RecuperarclaveComponent } from './recuperarclave/recuperarclave.component';
+import { RegisterComponent } from './register/register.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CerrarsesionComponent } from './cerrarsesion/cerrarsesion.component';
 
 
 @NgModule({
   declarations: [
     IdentificacionComponent,
     CambioclaveComponent,
-    RecuperarclaveComponent
+    RecuperarclaveComponent,
+    RegisterComponent,
+    CerrarsesionComponent
   ],
   imports: [
     CommonModule,
-    SeguridadRoutingModule
+    SeguridadRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class SeguridadModule { }
